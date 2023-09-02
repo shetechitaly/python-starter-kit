@@ -1,0 +1,69 @@
+---
+sidebar_position: 1
+---
+
+# Pandas: DataFrame e Series
+
+Argomenti: DataFrame, Series
+
+## Intro
+
+[Pandas](https://pandas.pydata.org/) è una delle librerie più popolari in Python per l'analisi dei dati. Questa libreria fornisce strutture dati e metodi di analisi efficienti per manipolare tabelle numeriche e serie temporali. I principali componenti di Pandas sono `DataFrame` e `Series`.
+
+## Series
+
+
+Una `Series` è una struttura dati unidimensionale simile a un array, una lista o una colonna in una tabella. Ha una etichetta per ciascuna entrata, che è come un indice per gli array in Python.
+
+Ecco come creare una `Series`:
+
+```python
+import pandas as pd
+
+s = pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])
+print(s)
+```
+
+Nell'esempio, abbiamo una `Series` con valori dall'1 al 4 e un indice esplicitamente definito.
+
+## DataFrame
+
+Un `DataFrame` è una struttura dati bidimensionale che può essere immaginata come una tabella in un database, un foglio di calcolo o una tabelle SQL. Ha sia righe che colonne, ed ogni colonna in un `DataFrame` può avere un tipo diverso, come numeri, stringhe, e così via.
+
+Ecco come creare un `DataFrame`:
+
+```python
+data = {
+    'Nome': ['Anna', 'Marco', 'Luca'],
+    'Età': [25, 30, 22],
+    'Città': ['Roma', 'Milano', 'Torino']
+}
+
+df = pd.DataFrame(data)
+print(df)
+```
+
+Nell'esempio, abbiamo creato un `DataFrame` con tre colonne: `Nome`, `Età` e `Città`. Ogni colonna ha una serie di valori associati.
+
+## Differenza tra Series e DataFrame
+
+Mentre una `Series` è una struttura dati unidimensionale che può avere qualsiasi tipo di dati, un `DataFrame` è bidimensionale. Puoi immaginare un `DataFrame` come una collezione di `Series` con lo stesso indice.
+
+## Esercizi
+
+### Esercizio 1
+
+1.  Crea una `Series` con i numeri dal 1 al 10 e utilizza come indice le lettere dell'alfabeto dalle lettera 'a' alla 'j'.
+
+### Esercizio 2
+
+1.  Crea un `DataFrame` con i seguenti dati:
+
+    -   Nomi: Alessia, Tommaso, Marta
+    -   Età: 20, 23, 27
+    -   Professione: Studente, Ingegnere, Medico
+2.  Dopo aver creato il `DataFrame`, stampa solo la colonna "Nome" e poi solo la riga corrispondente a "Marta".
+
+Congratulazioni! 🎉
+
+Ora hai una buona comprensione delle strutture dati fondamentali in Pandas.
