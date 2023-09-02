@@ -1,0 +1,59 @@
+---
+sidebar_position: 2
+---
+
+# Pandas: Lettura dei dati da CSV
+Argomenti: read_csv()
+
+## Intro
+Lavorare con i dati è una delle funzioni primarie di Pandas, e uno dei formati di dati più comuni con cui gli analisti lavorano è il [CSV](https://it.wikipedia.org/wiki/Comma-separated_values) (Comma-Separated Values). Pandas offre funzionalità potenti e flessibili per la lettura dei file CSV e la conversione di questi dati in un DataFrame.
+
+## read_csv()
+
+La funzione read_csv() di Pandas è una delle funzioni più utilizzate per caricare dati da file CSV. Ha molte opzioni che possono essere personalizzate per gestire casi particolari, ma l'uso base è abbastanza semplice.
+
+Ecco un esempio di come leggere un file CSV:
+
+```python
+import pandas as pd
+
+# Leggi il file CSV e memorizzalo in un DataFrame
+df = pd.read_csv('nome_del_file.csv')
+
+# Stampa le prime 5 righe del DataFrame
+print(df.head())
+```
+
+Nell'esempio sopra, stiamo leggendo un file CSV chiamato 'nome_del_file.csv' e stampando le prime 5 righe del DataFrame risultante.
+
+## Opzioni Comuni
+
+La funzione read_csv() ha molte opzioni che possono essere utili. Ecco alcune delle più comuni:
+
+**delimiter**: Specifica il delimitatore utilizzato nel file. Il default è la virgola (,). Ad esempio, per un file TSV (Tab-Separated Values), puoi usare delimiter='\t'.
+
+**header**: Specifica quale riga del file da utilizzare come intestazione delle colonne. Di default è impostato su header=0, che utilizza la prima riga.
+
+**index_col**: Permette di specificare una colonna del CSV da utilizzare come indice per il DataFrame.
+
+**usecols**: Consente di selezionare un sottoinsieme di colonne da leggere nel DataFrame.
+
+Ecco come potresti utilizzare alcune di queste opzioni:
+
+```python
+df = pd.read_csv('nome_del_file.csv', delimiter=';', header=None, usecols=[0, 2, 4])
+```
+
+## Esercizi
+
+### Esercizio 1
+
+Scarica un qualsiasi file CSV di esempio dalla rete (o crea uno tu stesso). Prova a leggere il file in un DataFrame usando Pandas e stampa le prime 10 righe.
+
+### Esercizio 2
+
+Leggi lo stesso file CSV ma questa volta seleziona solo un paio di colonne e usa una colonna diversa come indice.
+
+Congratulazioni! 🎉
+
+Con la capacità di leggere dati da file CSV, hai ora accesso a una vasta gamma di dataset disponibili online. 
