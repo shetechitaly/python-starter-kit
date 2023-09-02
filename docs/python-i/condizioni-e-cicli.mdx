@@ -1,0 +1,77 @@
+---
+sidebar_position: 3
+---
+
+# Condizioni e cicli
+
+Argomenti: if, else, elif, while, for
+
+## Intro
+
+Le istruzioni di controllo del flusso in Python sono essenziali per gestire la logica di un programma. Le condizioni e i cicli sono tra le istruzioni più importanti, poiché consentono di eseguire un blocco di codice solo se una condizione è verificata o di ripetere un blocco di codice per un certo numero di volte.
+
+## if, else, elif
+
+Le istruzioni if, else e elif sono utilizzate per controllare la logica del programma in base a una determinata condizione. Se la condizione è vera, il blocco di codice specificato nell'istruzione if viene eseguito. Altrimenti, si controllano le altre condizioni con elif, e se nessuna di esse è vera, viene eseguito il blocco else. Ad esempio:
+
+```python 
+eta = 18
+
+if eta >= 18:
+    print("Sei maggiorenne.")
+else:
+    print("Sei minorenne.")
+```
+
+Nell'esempio, abbiamo utilizzato l'istruzione if per verificare se l'età è maggiore o uguale a 18.
+
+## while
+
+Il ciclo while esegue il blocco di codice finché la condizione specificata è verificata.
+
+Ecco un esempio di ciclo while che stampa i numeri da 0 a 4:
+
+```python
+i = 0
+
+while i < 5:
+    print(i)
+    i += 1
+```
+
+## for
+
+Il ciclo for è utilizzato per iterare su una sequenza, come una lista o una stringa, o per eseguire un blocco di codice un numero di volte predefinito.
+
+Ecco un esempio di ciclo for che stampa i numeri da 0 a 4:
+
+```python
+for i in range(5):
+    print(i)
+```
+
+## Esercizi
+
+### Esercizio 1
+
+In un editor Python, dichiara una variabile intera, poi controlla se il numero è pari o dispari e stampa il risultato.
+
+### Esercizio 2
+
+In un editor Python, scrivi un programma che chiede all'utente di inserire una password e continua a richiederla finché l'utente non inserisce la password corretta ("password123").
+
+:::tip
+
+Per poter permettere l'inserimento all'utente della password puoi utilizzare questo metodo:
+
+`password = input("Inserisci la password:")`
+
+:::
+
+### Esercizio 3
+
+In un editor Python, scrivi un programma che stampa tutti i numeri pari da 0 a 100.
+
+Congratulazioni! 🎉
+
+Ora ti aspetta la pausa pranzo. Buon appetito! 🍴
