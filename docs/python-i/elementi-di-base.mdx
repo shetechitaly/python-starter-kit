@@ -5,3 +5,95 @@ sidebar_position: 2
 # Elementi di base di Python
 
 Argomenti: Biblioteche, Variabili e Operatori
+
+Python è un linguaggio a *tipizzazione dinamica*, il che significa che non è necessario specificare il tipo di dato quando si dichiara una variabile. Ciò lo rende estremamente flessibile e intuitivo per i programmatori.
+
+A differenza di JavaScript e del DOM, **Python è spesso associato all'utilizzo di librerie esterne** per potenziare le sue funzionalità. Queste librerie sono raccolte di funzioni e classi che permettono di svolgere specifici compiti.
+
+## Librerie
+
+Utilizzando le librerie, gli sviluppatori possono svolgere una vasta gamma di compiti, dall'analisi dei dati alla grafica, dalla manipolazione di stringhe alla creazione di applicazioni web. Per utilizzare una libreria in Python, devi prima installarla e poi importarla nel tuo script.
+
+Il comando `import` è utilizzato per includere una libreria nel tuo script. Ad esempio, per utilizzare la libreria `math`, che fornisce funzioni matematiche, puoi fare così: 
+
+```python 
+import math
+```
+
+# Usare la funzione sqrt dalla libreria math
+
+```python
+radice = math.sqrt(25)
+print(radice)  # stampa 5.0
+```
+
+In questo esempio, abbiamo utilizzato la funzione `sqrt` dalla libreria `math` per calcolare la radice quadrata di 25.
+
+:::caution attenzione
+
+Assicurati di avere la libreria installata prima di importarla nel tuo script. Puoi utilizzare pip, il gestore pacchetti di Python, per installare librerie.
+
+:::
+
+
+## Variabili 
+
+In Python, puoi dichiarare una variabile semplicemente assegnando un valore ad un nome. Non hai bisogno di parole chiave come "var" o "let".
+
+Ad esempio:
+
+```python
+nome = "Mario"
+eta = 30
+PI_GRECO = 3.14
+```
+
+In questo esempio, abbiamo dichiarato tre variabili: `nome`, `eta` e `PI_GRECO`.
+
+:::caution attenzione
+
+Python è case-sensitive, quindi i nomi `banana`, `Banana` e `BaNaNa` sono tre variabili diverse.
+
+:::
+
+## Operatori 
+
+Python supporta una vasta gamma di operatori, come l'operatore di assegnazione "=", l'operatore di addizione "+", e molti altri:
+
+```python
+a = 10
+b = 5
+c = a + b  # 15
+d = a - b  # 5
+e = a * b  # 50
+f = a / b  # 2.0
+g = a % b  # 0
+h = "Hello " + "World"  # "Hello World"
+```
+
+Python supporta anche espressioni complesse:
+
+```python
+x = 10
+y = 5
+z = (x + y) * 2  # 30
+```
+
+## Esercizi
+
+### Esercizio 1
+
+In un editor Python, dichiara tre variabili: due numeriche e una stringa e assegnale un valore iniziale. Stampale a video.
+
+### Esercizio 2
+
+Ancora nell'editor, dichiara due variabili. Utilizzando gli operatori aritmetici, scrivi un programma Python che esegua le seguenti operazioni e mostri il risultato su console:
+
+1.  Somma delle due variabili
+2.  Sottrazione della prima variabile dalla seconda
+3.  Moltiplicazione delle due variabili
+4.  Divisione della seconda variabile per la prima
+
+Congratulazioni! 🎉
+
+Ora hai appreso i concetti di base di Python e sei pront* per imparare di più e iniziare a creare script efficaci e funzionanti.
