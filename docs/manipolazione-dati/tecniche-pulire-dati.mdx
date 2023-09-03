@@ -1,0 +1,74 @@
+---
+siderbar_position: 1
+---
+
+# Tecniche di base per pulire i dati
+Argomenti: Gestione dei valori mancanti, rimozione delle colonne, deduplicazione, conversione dei tipi di dati.
+
+## Intro
+
+La pulizia dei dati è una delle fasi più critiche e consumative nel ciclo di vita dell'analisi dei dati. Dati puliti e accurati sono essenziali per ottenere risultati analitici corretti. Questo modulo esplora alcune delle tecniche di base per la pulizia dei dati usando Pandas.
+
+## Gestione dei valori mancanti
+
+I valori mancanti sono comuni nei set di dati e possono distorcere l'analisi se non trattati correttamente.
+
+-   **Rilevare valori mancanti**:
+    ```python
+    missing_values = data.isnull().sum()
+    ```
+
+-   **Eliminare righe con valori mancanti**:
+    ```python
+    data_cleaned = data.dropna()
+    ```
+
+-   **Imputazione dei valori mancanti** (sostituendo con la media, mediana, moda, o un valore fisso):
+    ```python
+    data_filled = data.fillna(data['colonna'].mean())
+    ```
+
+## Rimozione delle colonne
+
+Alcune colonne potrebbero non essere rilevanti per l'analisi e possono essere eliminate per semplificare il DataFrame.
+
+```python
+data_reduced = data.drop(columns=['colonna_inutile1', 'colonna_inutile2'])
+```
+
+## Deduplicazione
+
+I dati duplicati possono distorcere le analisi. È fondamentale identificarli e rimuoverli.
+
+-   **Rilevare duplicati**:
+    ```python
+    duplicati = data.duplicated()
+    ```
+
+-   **Rimuovere duplicati**:
+    ```python
+    data_unique = data.drop_duplicates()
+    ```
+
+## Conversione dei tipi di dati
+
+La conversione corretta dei tipi di dati assicura che le operazioni sui dati siano appropriate e senza errori.
+
+```python
+data['colonna_stringa'] = data['colonna_stringa'].astype('category')
+```
+
+:::tip 
+Mantieni sempre una copia del tuo dataset originale prima di iniziare la pulizia. Questo ti permette di tornare indietro se commetti errori durante la manipolazione. 
+:::
+
+## Esercizi
+
+1.  Identifica e gestisci i valori mancanti nel tuo dataset.
+2.  Esamina il tuo DataFrame per eventuali duplicati e decide come gestirli.
+3.  Controlla i tipi di dati delle colonne e converti dove necessario.
+4.  Valuta se ci sono colonne non necessarie e prendi una decisione informata sulla loro rimozione.
+
+Congratulazioni! 🎉
+
+Hai appreso alcune delle tecniche fondamentali per pulire e manipolare i tuoi dati.
