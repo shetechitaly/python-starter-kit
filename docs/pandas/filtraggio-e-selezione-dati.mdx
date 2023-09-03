@@ -1,0 +1,68 @@
+---
+sidebar_position: 4
+--- 
+
+# Pandas: Filtraggio e selezione di dati
+Argomenti: selezione di colonne, selezione di righe, filtraggio condizionale.
+
+## Intro
+
+Una delle principali forze di Pandas è la capacità di **filtrare e selezionare dati in modo efficiente** da un `DataFrame`. Che tu stia cercando valori specifici, righe o colonne, o che tu voglia applicare condizioni più complesse, Pandas ha gli strumenti giusti per il lavoro.
+
+## Selezione di colonne
+
+Selezionare una colonna da un `DataFrame` è semplice come accedere a un elemento di un dizionario utilizzando il nome della colonna:
+
+```python
+import pandas as pd
+# Supponiamo di avere un DataFrame chiamato df
+colonna = df["nome_colonna"]
+```
+
+Per selezionare più colonne, è possibile utilizzare una lista di nomi di colonne:
+
+```python
+colonne_selezionate = df[["colonna1", "colonna2", "colonna3"]]
+```
+
+## Selezione di righe
+
+Per selezionare righe in base alla loro posizione, Pandas offre i metodi `.loc[]` e `.iloc[]`. Mentre `.loc[]` si riferisce agli indici basati su etichetta, `.iloc[]` si riferisce agli indici basati su posizione (interi):
+
+```python
+# Seleziona la riga con etichetta indice 5
+riga = df.loc[5]
+
+# Seleziona la sesta riga (base 0)
+riga = df.iloc[5]
+```
+
+## Filtraggio condizionale
+
+Spesso, si desidera selezionare righe in base a una o più condizioni. Ecco come fare:
+
+```python
+# Supponiamo di voler selezionare tutte le righe dove la colonna 'eta' è maggiore di 18
+maggiorenni = df[df["eta"] > 18]
+```
+
+Per combinare più condizioni, si possono utilizzare gli operatori `&` (and) e `|` (or):
+
+```python
+# Seleziona le righe dove 'eta' è maggiore di 18 e 'città' è "Roma"
+roma_maggiorenni = df[(df["eta"] > 18) & (df["città"] == "Roma")]
+```
+
+Ricorda di mettere ogni condizione tra parentesi quando combini le condizioni.
+
+## Esercizi
+
+1.  Crea un `DataFrame` a partire da un file CSV o da un dizionario. Seleziona una singola colonna e più colonne contemporaneamente.
+
+2.  Prova a selezionare una specifica riga utilizzando sia `.loc[]` che `.iloc[]`.
+
+3.  Crea almeno tre differenti filtraggi condizionali sul tuo `DataFrame`, combinando più condizioni quando possibile.
+
+Congratulazioni! 🎉
+
+Hai appreso le basi del filtraggio e della selezione di dati con Pandas.
