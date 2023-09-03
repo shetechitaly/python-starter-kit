@@ -1,0 +1,70 @@
+---
+sidebar_position: 5
+---
+
+# Pandas: Rinominare colonne e ordinare i dati
+Argomenti: `rename()`, `sort_values()`, `sort_index()`.
+
+## Intro
+
+Nell'elaborazione e nell'analisi dei dati, spesso c'è la necessità di rinominare le colonne o di ordinare i dati in base a determinati criteri. Pandas fornisce funzioni intuitive e potenti per eseguire queste operazioni su un `DataFrame`.
+
+## Rinominare colonne
+
+Utilizzando il metodo `rename()`, è possibile rinominare le colonne di un `DataFrame`. Fornisci un dizionario in cui le chiavi rappresentano i nomi attuali delle colonne e i valori rappresentano i nuovi nomi:
+
+```python
+import pandas as pd
+
+# Supponiamo di avere un DataFrame chiamato df
+df = df.rename(columns={"vecchio_nome": "nuovo_nome", "vecchio_nome2": "nuovo_nome2"})
+```
+
+Nota: il metodo `rename()` ritorna un nuovo `DataFrame` a meno che non specifichi `inplace=True`.
+
+:::tip
+Se desideri modificare direttamente il DataFrame originale senza creare una copia, puoi utilizzare il parametro inplace=True nel metodo rename().
+:::
+
+## Ordinare i dati
+
+### `sort_values()`
+
+Per ordinare un `DataFrame` in base ai valori di una o più colonne, puoi utilizzare il metodo `sort_values()`:
+
+```python
+# Ordina il DataFrame in base alla colonna 'eta'
+df_ordinato = df.sort_values(by="eta")
+
+# Ordina in modo discendente
+df_ordinato_desc = df.sort_values(by="eta", ascending=False)
+
+# Ordina utilizzando più colonne
+df_multi_ordinato = df.sort_values(by=["città", "eta"])
+```
+
+### `sort_index()`
+
+Se hai bisogno di ordinare il tuo `DataFrame` in base all'indice piuttosto che ai valori, utilizza `sort_index()`:
+
+```python
+df_ordinato_per_indice = df.sort_index()
+```
+
+:::caution attenzione
+Quando ordini i dati, Pandas non modifica il DataFrame originale a meno che tu non lo specifichi con inplace=True. In caso contrario, sort_values() e sort_index() ritornano una copia ordinata.
+:::
+
+## Esercizi
+
+1.  Crea un `DataFrame` a partire da un file CSV o da un dizionario. Rinomina almeno due delle sue colonne.
+
+2.  Ordina il tuo `DataFrame` in base ai valori di una colonna, sia in ordine ascendente che discendente.
+
+3.  Prova a utilizzare `sort_values()` per ordinare il `DataFrame` in base ai valori di più colonne.
+
+4.  Riordina il tuo `DataFrame` utilizzando `sort_index()`.
+
+Congratulazioni! 🎉
+
+Hai appreso come rinominare colonne e ordinare i dati in un `DataFrame` con Pandas.
