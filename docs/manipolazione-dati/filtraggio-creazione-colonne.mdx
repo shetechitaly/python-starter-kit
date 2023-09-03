@@ -1,0 +1,63 @@
+---
+sidebar_position: 2
+---
+
+# Filtraggio e creazione di nuove colonne
+Argomenti: Utilizzo di condizioni per filtrare, creare colonne derivanti da altre colonne, uso di funzioni su colonne.
+
+## Intro
+
+Oltre alla pulizia dei dati, spesso abbiamo bisogno di adattare e trasformare i nostri dataset per rispondere a specifiche domande o preparare i dati per l'analisi. Una parte fondamentale di questo processo riguarda il filtraggio dei dati e la creazione di nuove colonne basate sulle informazioni esistenti.
+
+## Filtraggio dei dati
+
+Utilizzando Pandas, possiamo facilmente filtrare le righe del nostro DataFrame basandoci su condizioni specifiche:
+
+```python
+import pandas as pd
+
+# Supponiamo di avere un DataFrame chiamato 'data'
+filtro = data['colonna'] > 100
+data_filtrata = data[filtro]
+```
+
+È anche possibile combinare più condizioni utilizzando `&` (and) e `|` (or):
+
+```python
+filtro_composto = (data['colonna1'] > 100) & (data['colonna2'] == 'valore')
+data_filtrata_composta = data[filtro_composto]
+```
+
+## Creazione di nuove colonne
+
+Creare una nuova colonna derivante da colonne esistenti è un modo potente per aggiungere ulteriori informazioni al nostro DataFrame:
+
+```python
+data['nuova_colonna'] = data['colonna1'] + data['colonna2']
+```
+
+O, ad esempio, possiamo usare funzioni per operare su colonne e generare nuovi valori:
+
+```python
+def funzione_personalizzata(x):
+    return x * 2
+
+data['colonna_transformed'] = data['colonna'].apply(funzione_personalizzata)
+```
+
+:::tip 
+L'uso del metodo `.apply()` è molto potente e ti permette di applicare qualsiasi funzione su una colonna o su tutto il DataFrame. 
+:::
+
+
+## Esercizi
+
+1.  Filtra il tuo DataFrame basandoti su specifiche condizioni. Prova a combinare più condizioni.
+2.  Crea una nuova colonna nel tuo DataFrame che rappresenti una combinazione di due colonne esistenti.
+3.  Usa una funzione personalizzata per trasformare una colonna e crea una nuova colonna con i risultati.
+
+Congratulazioni! 🎉
+
+Hai appreso come filtrare efficacemente i tuoi dati e come creare nuove colonne per arricchire e trasformare il tuo dataset. 
+
+Ora sei pront* per il progetto finale! 😎
