@@ -1,0 +1,70 @@
+---
+sidebar_position: 2
+---
+
+# Statistiche descrittive semplici
+Argomenti: media, mediana, deviazione standard, quartili, valori minimi e massimi.
+
+## Intro
+
+Una parte essenziale dell'EDA è comprendere le statistiche descrittive di base dei dati. Queste statistiche forniscono un riassunto numerico delle caratteristiche di un set di dati, permettendo di ottenere rapidamente una visione d'insieme delle tendenze centrali, della dispersione e della forma dei dati.
+
+## Statistiche chiave
+
+### Media e Mediana
+
+**Media** è la somma di tutti i valori divisa per il numero di valori. Riflette il valore "centrale" del set di dati.
+
+```python
+media = data['colonna'].mean()
+```
+
+**Mediana** è il valore centrale di un set di dati quando è ordinato. È meno sensibile agli outlier rispetto alla media.
+
+
+```python
+mediana = data['colonna'].median()
+```
+
+### Deviazione Standard
+
+La **deviazione standard** rappresenta la dispersione dei dati attorno alla loro media. Un valore elevato indica una maggiore variabilità.
+
+```python
+dev_std = data['colonna'].std()
+```
+
+### Quartili, Minimi e Massimi
+
+I **quartili** dividono i dati in quattro parti uguali. Il primo quartile (Q1) è il valore al 25° percentile, mentre il terzo quartile (Q3) è al 75° percentile.
+
+```python
+Q1 = data['colonna'].quantile(0.25)
+Q3 = data['colonna'].quantile(0.75)
+```
+
+I **valori minimi e massimi** rappresentano i valori estremi del set di dati.
+
+```python
+minimo = data['colonna'].min()
+massimo = data['colonna'].max()
+```
+
+:::tip 
+Il metodo `describe()` di Pandas fornisce un sommario di tutte queste statistiche descrittive in una sola chiamata:
+
+```python
+data['colonna'].describe()
+```
+:::
+
+## Esercizi
+
+1.  Calcola la media, la mediana e la deviazione standard di una delle tue variabili.
+2.  Identifica i quartili per una variabile e rifletti su come i dati sono distribuiti.
+3.  Confronta le statistiche descrittive di due diverse colonne nel tuo set di dati.
+4.  Utilizza il metodo `describe()` per ottenere un sommario delle statistiche chiave e rifletti su eventuali insight che potrebbero emergere.
+
+Congratulazioni! 🎉
+
+Hai acquisito una solida comprensione delle statistiche descrittive di base nell'ambito dell'Analisi Esplorativa dei Dati.
