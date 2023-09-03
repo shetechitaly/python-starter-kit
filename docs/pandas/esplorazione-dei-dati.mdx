@@ -1,0 +1,61 @@
+---
+sidebar_position: 3
+---
+
+# Pandas: Esplorazione dei dati
+
+Argomenti: `head()`, `describe()`, `info()`
+
+## Intro
+
+Una volta caricati i dati in un `DataFrame` con Pandas, spesso il primo passo è esplorare questi dati per avere una prima comprensione di cosa contengano. Pandas offre diversi metodi utili per dare un'occhiata iniziale ai dati e raccogliere statistiche sommarie.
+
+## `head()`
+
+Il metodo `head()` permette di visualizzare le prime righe di un `DataFrame`. Di default, mostra le prime 5 righe, ma è possibile specificare un numero diverso come argomento:
+
+```python
+import pandas as pd
+# Supponiamo di avere un DataFrame chiamato df
+df.head()  # mostra le prime 5 righe
+df.head(10)  # mostra le prime 10 righe`
+```
+
+## `describe()`
+
+Il metodo `describe()` fornisce statistiche descrittive del `DataFrame`. Questo include conteggi, medie, deviazioni standard, valori minimi e massimi, e i quartili. È particolarmente utile per avere una visione d'insieme delle distribuzioni numeriche nel tuo set di dati:
+
+```python
+df.describe()
+```
+
+Da notare che `describe()` di default considera solo le colonne numeriche. Se vuoi includere anche le colonne non numeriche, puoi utilizzare l'opzione `include='all'`:
+
+
+```python
+df.describe(include='all')`
+```
+
+## `info()`
+
+Il metodo `info()` fornisce un sommario conciso del `DataFrame`, mostrando il tipo di dati di ciascuna colonna, il numero di valori non nulli e l'uso della memoria:
+
+```python
+df.info()
+```
+
+Questo metodo è estremamente utile quando si lavora con grandi set di dati, in quanto fornisce informazioni sul tipo di dati e su eventuali valori mancanti.
+
+## Esercizi
+
+### Esercizio 1
+
+1.  Crea un `DataFrame` a partire da un file CSV o da un dizionario. Usa il metodo `head()` per visualizzare le prime righe del `DataFrame`.
+
+2.  Utilizza `describe()` per ottenere statistiche descrittive del tuo `DataFrame`. Prova anche l'opzione `include='all'` e osserva le differenze.
+
+3.  Chiama il metodo `info()` sul tuo `DataFrame` e analizza l'output. Ci sono colonne con valori mancanti? Quali colonne occupano più memoria?
+
+Congratulazioni! 🎉
+
+Hai acquisito strumenti fondamentali per esplorare e comprendere rapidamente i tuoi set di dati con Pandas.
