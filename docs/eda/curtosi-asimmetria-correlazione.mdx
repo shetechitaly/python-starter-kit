@@ -1,0 +1,66 @@
+---
+sidebar_position: 3
+---
+
+# Introduzione a curtosi, asimmetria e correlazione
+Argomenti: Curtosi, Asimmetria (Skewness), Coefficiente di correlazione di Pearson.
+
+## Intro
+
+Nell'analisi esplorativa dei dati, oltre alle statistiche descrittive fondamentali, è essenziale comprendere altre metriche che danno informazioni sulla forma della distribuzione dei dati e le relazioni tra variabili. In questo contesto, curtosi, asimmetria e correlazione svolgono un ruolo cruciale.
+
+## Curtosi
+
+La **curtosi** misura la "coda" della distribuzione. Indica se i dati sono pesantemente concentrati attorno alla media (leptocurtica) o se sono più distribuiti (platicurtica).
+
+-   **Leptocurtica**: Curtosi > 0
+-   **Mesocurtica** (simile alla normale): Curtosi = 0
+-   **Platicurtica**: Curtosi < 0
+
+
+
+```python
+curtosi = data['colonna'].kurt()
+```
+
+## Asimmetria (Skewness)
+
+L'**asimmetria** misura la simmetria (o mancanza di essa) della distribuzione dei dati attorno alla media. Indica la direzione e la quantità di asimmetria.
+
+-   **Asimmetria positiva**: Coda a destra
+-   **Asimmetria negativa**: Coda a sinistra
+
+```python
+asimmetria = data['colonna'].skew()
+```
+
+## Correlazione
+
+La **correlazione** misura la relazione lineare tra due variabili. Il coefficiente di correlazione di Pearson varia tra -1 e 1.
+
+-   **Correlazione positiva**: quando una variabile aumenta, l'altra tende ad aumentare.
+-   **Correlazione negativa**: quando una variabile aumenta, l'altra tende a diminuire.
+-   **Nessuna correlazione**: nessuna relazione lineare evidente.
+
+```python
+correlazione = data['colonna1'].corr(data['colonna2'])
+```
+
+:::tip 
+Il metodo `corr()` di Pandas può essere utilizzato su un intero DataFrame per ottenere una matrice di correlazione tra tutte le variabili
+:
+
+```python
+matrice_correlazione = data.corr()
+```
+:::
+
+## Esercizi
+
+1.  Calcola l'asimmetria e la curtosi per una delle tue variabili e rifletti su come i dati sono distribuiti.
+2.  Analizza la correlazione tra due variabili nel tuo set di dati.
+3.  Utilizza il metodo `corr()` per visualizzare una matrice di correlazione e individua le variabili fortemente correlate.
+
+Congratulazioni! 🎉
+
+Hai approfondito la tua comprensione di metriche avanzate nell'Analisi Esplorativa dei Dati.
