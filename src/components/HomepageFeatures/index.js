@@ -8,8 +8,8 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_having_fun_re_vj4h.svg').default,
     description: (
       <>
-       Approfitta di questa opportunità per fare networking.
-       Il networking può portare a nuove opportunità lavorative, partnership e amicizie durature.
+      Approfitta di questa opportunità per fare networking. 
+      Conoscere le altre persone che partecipano al bootcamp può portare a nuove opportunità lavorative, partnership e amicizie durature.
       </>
     ),
   },
