@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Python starter kit',
-  tagline: 'SheTech & Unicredit Bootcamp',
+  title: 'Python Starter Kit',
+  tagline: 'SheTech & UniCredit Bootcamp',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
