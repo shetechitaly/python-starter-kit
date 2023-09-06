@@ -64,9 +64,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/social-card.png',
       navbar: {
-        title: 'Python starter kit',
+        title: 'Python Starter Kit',
         logo: {
-          alt: 'Python starter kit',
+          alt: 'Python Starter Kit',
           src: 'img/logo.png',
         },
         items: [
