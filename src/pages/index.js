@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Bootcamp JavaScript by SheTech e Deloitte">
+      description="Python Starter Kit by SheTech e UniCredit">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
